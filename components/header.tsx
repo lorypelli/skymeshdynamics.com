@@ -50,6 +50,9 @@ export function Header() {
               <NavLink href='#services' gradient='bg-linear-to-r from-cyan-500/20 to-blue-500/20'>
                 Services
               </NavLink>
+              <NavLink href='/docs' gradient='bg-linear-to-r from-indigo-500/20 to-violet-500/20'>
+                Docs
+              </NavLink>
             </div>
 
             <button

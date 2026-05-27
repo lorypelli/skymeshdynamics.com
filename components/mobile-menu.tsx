@@ -27,7 +27,7 @@ export function MobileMenu({ isOpen, isClosing, onClose, onLinkClick }: MobileMe
 
       <div
         className={cn(
-          'fixed top-0 right-0 bottom-0 z-70 w-[280px] md:hidden',
+          'fixed top-0 right-0 bottom-0 z-70 w-70 md:hidden',
           'glass-card border-l border-white/10 bg-slate-900/95 backdrop-blur-xl',
           'transition-transform duration-300 ease-out',
           isClosing ? 'translate-x-full' : 'translate-x-0',
@@ -79,6 +79,14 @@ export function MobileMenu({ isOpen, isClosing, onClose, onLinkClick }: MobileMe
               onClick={onLinkClick}
             >
               Services
+            </MobileMenuLink>
+            <MobileMenuLink
+              href='/docs'
+              gradient='bg-linear-to-r from-indigo-500/30 to-violet-500/30'
+              shadowColor='shadow-[0_0_30px_rgba(99,102,241,0.5)]'
+              onClick={onLinkClick}
+            >
+              Docs
             </MobileMenuLink>
           </nav>
         </div>
