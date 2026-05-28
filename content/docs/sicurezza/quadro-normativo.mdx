@@ -1,6 +1,6 @@
 ---
 title: Quadro Normativo — D.Lgs 81/08
-description: Il sistema di prevenzione aziendale secondo il Testo Unico della Sicurezza sul Lavoro
+description: Il sistema di prevenzione aziendale di SkyMesh Dynamics secondo il Testo Unico della Sicurezza sul Lavoro
 ---
 
 # Quadro Normativo: Il Sistema di Prevenzione (D.Lgs 81/08)
@@ -8,8 +8,10 @@ description: Il sistema di prevenzione aziendale secondo il Testo Unico della Si
 ## Etimologia e Concetto di Sicurezza
 
 Il concetto di sicurezza deriva dall'espressione latina **_sine cure_** (senza preoccupazione),
-e ambisce a una condizione di assenza di pericolo. Sebbene difficile da raggiungere in senso
-assoluto, questa condizione viene perseguita tramite il rigore normativo.
+e ambisce a una condizione di assenza di pericolo. In **SkyMesh Dynamics**, azienda di hosting
+distribuito e cloud, questa condizione viene perseguita attraverso il rigore normativo e
+l'integrazione dei processi di sicurezza con i valori fondanti di **affidabilità** e
+**efficienza energetica**.
 
 <Callout type='warn'>
   La sicurezza assoluta è un obiettivo irraggiungibile in pratica. L'obiettivo realistico è la **riduzione del rischio
@@ -19,10 +21,11 @@ assoluto, questa condizione viene perseguita tramite il rigore normativo.
 ## Il Testo Unico della Sicurezza
 
 Il pilastro legislativo italiano è il **D.Lgs 81/08** (Testo Unico della Sicurezza sul
-Lavoro). Tale norma impone adempimenti giuridici inderogabili per il sistema di prevenzione
-aziendale:
+Lavoro). Tale norma impone adempimenti giuridici inderogabili che SkyMesh Dynamics applica
+nell'ambito della propria infrastruttura tecnologica — server room, postazioni DevOps e
+ambienti di edge computing:
 
-- **Rispetto degli standard tecnico-strutturali** dei luoghi di lavoro
+- **Rispetto degli standard tecnico-strutturali** dei luoghi di lavoro (data center, uffici tecnici, nodi distribuiti)
 - **Valutazione costante dei rischi** e implementazione di misure preventive
 - **Sorveglianza sanitaria obbligatoria** tramite Medico Competente
 - **Vigilanza attiva** e verifica periodica dell'efficacia delle procedure adottate
@@ -71,18 +74,35 @@ Affidata al **Medico Competente**, include:
 
 In base all'**Art. 37 D.Lgs 81/08**, ogni lavoratore deve ricevere:
 
-- Formazione adeguata ai rischi specifici del proprio ruolo
-- Informazioni sulle misure di prevenzione vigenti
-- Aggiornamenti periodici in caso di variazioni
+- Formazione adeguata ai rischi specifici del proprio ruolo (sistemisti, DevOps, network engineer)
+- Informazioni sulle misure di prevenzione vigenti negli ambienti di lavoro SkyMesh
+- Aggiornamenti periodici in caso di variazioni dell'infrastruttura o delle procedure operative
+
+<Callout type='info'>
+  In SkyMesh Dynamics, la formazione sulla sicurezza include anche le procedure operative per la gestione dei rack
+  server, degli UPS e dei cablaggi ad alta densità presenti negli ambienti di data center.
+</Callout>
+
+## Rischi Specifici del Settore Cloud Hosting
+
+L'attività di SkyMesh Dynamics espone i lavoratori a rischi caratteristici del settore:
+
+| Rischio | Contesto | Misura Principale |
+| ------- | -------- | ----------------- |
+| **Elettrico** | Server room, rack, UPS, PDU | Impianti a regola d'arte, DPI isolanti |
+| **Ergonomico / VDT** | Postazioni DevOps, NOC, smart working | Pause obbligatorie, ergonomia postazione |
+| **Stress da reperibilità H24** | On-call rotation, gestione incidenti | Organizzazione turni, supporto psicologico |
+| **Incendio** | Server room, cavi ad alta densità** | Impianti antincendio a gas (FM-200/CO₂) |
+| **Movimentazione carichi** | Installazione server e apparati di rete | Formazione specifica, ausili meccanici |
 
 ## Struttura del Sistema di Prevenzione
 
-Il sistema di prevenzione aziendale si articola secondo lo schema seguente:
+Il sistema di prevenzione di SkyMesh Dynamics si articola secondo lo schema seguente:
 
 ```
 Datore di Lavoro
     ├── RSPP (Responsabile Servizio Prevenzione e Protezione)
-    │     └── ASPP (Addetti al SPP)
-    ├── Medico Competente
+    │     └── ASPP (Addetti al SPP — inclusi referenti per infrastrutture IT)
+    ├── Medico Competente (sorveglianza VDT e rischi specifici tech)
     └── RLS (Rappresentante dei Lavoratori per la Sicurezza)
 ```

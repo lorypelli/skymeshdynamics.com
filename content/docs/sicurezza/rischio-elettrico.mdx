@@ -1,17 +1,24 @@
 ---
 title: Analisi dei Rischi — Elettrico e VDT
-description: Rischio elettrico (Artt. 80-87 D.Lgs 81/08), effetti fisiologici della corrente e tutele per i videoterminali
+description: Rischio elettrico negli ambienti data center di SkyMesh Dynamics (Artt. 80-87 D.Lgs 81/08) e tutele per i lavoratori VDT
 ---
 
 # Analisi dei Rischi Specifici: Rischio Elettrico e Videoterminali
 
 ## Il Rischio Elettrico
 
-Il rischio elettrico è **centrale per un'azienda di hosting** ed è disciplinato dagli
-**Artt. 80–87 del D.Lgs 81/08**.
+Il rischio elettrico è **centrale per SkyMesh Dynamics**, azienda di hosting distribuito
+che gestisce server room, rack ad alta densità, UPS (Uninterruptible Power Supply) e PDU
+(Power Distribution Unit). È disciplinato dagli **Artt. 80–87 del D.Lgs 81/08**.
 
 - **Art. 81**: Ogni impianto deve essere costruito **a regola d'arte** (secondo norme UNI/EN)
 - **Legge 46/90**: Impone i dispositivi di protezione fondamentali
+
+<Callout type='info'>
+  Negli ambienti di data center di SkyMesh Dynamics sono presenti sorgenti elettriche ad alta
+  continuità (doppia alimentazione, UPS industriali, generatori di backup) che richiedono
+  procedure operative specifiche e DPI idonei per qualsiasi intervento di manutenzione.
+</Callout>
 
 ### Dispositivi di Protezione Obbligatori (Legge 46/90)
 
@@ -78,9 +85,10 @@ alla durata dell'esposizione. La norma tecnica IEC 60479 definisce quattro zone:
 
 ## Rischio Videoterminali (VDT)
 
-Per mitigare i rischi legati alla **natura digitale** dell'attività di hosting,
-SkyMesh Dynamics applica le tutele previste dal Testo Unico anche per l'utilizzo
-di attrezzature munite di videoterminali.
+Data la natura tecnologica dell'attività di SkyMesh Dynamics, la quasi totalità dei
+lavoratori — sistemisti, DevOps engineer, network specialist e personale NOC — opera
+su postazioni VDT per molte ore al giorno, incluso in modalità **smart working** e
+gestione da remoto dell'infrastruttura cloud distribuita.
 
 ### Definizione di Lavoratore VDT
 
@@ -90,11 +98,13 @@ per almeno **20 ore settimanali** (dedotte le interruzioni).
 ### Misure Preventive per i VDT
 
 - **Pause regolamentari**: almeno 15 minuti ogni 2 ore di utilizzo continuativo
-- **Sorveglianza sanitaria**: visite oculistiche periodiche
-- **Ergonomia della postazione**: corretta configurazione di schermo, tastiera e seduta
-- **Illuminazione adeguata**: evitare riflessi e abbagliamenti sullo schermo
+- **Sorveglianza sanitaria**: visite oculistiche periodiche (obbligatorie per addetti VDT)
+- **Ergonomia della postazione**: corretta configurazione di schermo, tastiera e seduta, incluse le postazioni di smart working
+- **Illuminazione adeguata**: evitare riflessi e abbagliamenti sullo schermo, anche nei rack room dove sono presenti monitor di gestione
+- **Gestione reperibilità H24**: per il personale on-call che monitora l'infrastruttura distribuita, vanno definite rotazioni che limitino il carico cognitivo prolungato
 
 <Callout type='warn'>
   La mancata applicazione delle tutele VDT espone il Datore di Lavoro a responsabilità civile e penale per i disturbi
-  muscoloscheletrici e visivi sviluppati dai lavoratori.
+  muscoloscheletrici e visivi sviluppati dai lavoratori. In SkyMesh Dynamics, questo include anche il personale
+  operativo da remoto che gestisce i nodi dell'infrastruttura cloud distribuita.
 </Callout>
