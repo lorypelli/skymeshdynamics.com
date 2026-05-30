@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { LucideIcon } from 'lucide-react';
+import { useState } from 'react';
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -9,26 +10,16 @@ interface ServiceCardProps {
   description: string;
   features: string[];
   gradient: string;
-  isHovered: boolean;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
 }
 
-export function ServiceCard({
-  icon: Icon,
-  title,
-  description,
-  features,
-  gradient,
-  isHovered,
-  onMouseEnter,
-  onMouseLeave,
-}: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description, features, gradient }: ServiceCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className='group glass-card glass-card-hover morph-hover shimmer relative overflow-hidden rounded-3xl p-8 transition-all duration-500'
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className='relative z-10 space-y-6'>
         <div

@@ -1,7 +1,4 @@
-'use client';
-
 import { Leaf, Shield, Sparkles, Zap } from 'lucide-react';
-import { useState } from 'react';
 import { SectionHeader } from './section-header';
 import { ValueCard } from './value-card';
 
@@ -37,8 +34,6 @@ const values = [
 ];
 
 export function Values() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section id='values' className='relative py-32'>
       <div className='container mx-auto px-6'>
@@ -46,16 +41,7 @@ export function Values() {
 
         <div className='mx-auto grid max-w-6xl gap-8 md:grid-cols-2'>
           {values.map((value, index) => (
-            <ValueCard
-              key={index}
-              icon={value.icon}
-              title={value.title}
-              description={value.description}
-              gradient={value.gradient}
-              isHovered={hoveredIndex === index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            />
+            <ValueCard key={index} {...value} />
           ))}
         </div>
       </div>

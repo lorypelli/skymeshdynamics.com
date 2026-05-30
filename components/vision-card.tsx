@@ -1,31 +1,23 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 interface VisionCardProps {
   number: string;
   title: string;
   description: string;
   gradient: string;
-  isHovered: boolean;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
 }
 
-export function VisionCard({
-  number,
-  title,
-  description,
-  gradient,
-  isHovered,
-  onMouseEnter,
-  onMouseLeave,
-}: VisionCardProps) {
+export function VisionCard({ number, title, description, gradient }: VisionCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className='group glass-card glass-card-hover morph-hover shimmer relative overflow-hidden rounded-3xl bg-slate-900/90 p-8 transition-all duration-500'
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className='relative z-10 space-y-4'>
         <div

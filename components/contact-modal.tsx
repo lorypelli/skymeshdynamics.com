@@ -11,6 +11,8 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
+const EMAIL = 'info@skymeshdynamics.com';
+
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [copied, setCopied] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -34,10 +36,8 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }, 300);
   };
 
-  const email = 'info@skymeshdynamics.com';
-
   const handleCopy = () => {
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText(EMAIL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -60,7 +60,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
       <div className='glass-card mb-6 rounded-2xl border border-white/20 bg-slate-800/90 p-4 text-center'>
         <p className='bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-lg font-semibold text-transparent'>
-          {email}
+          {EMAIL}
         </p>
       </div>
 

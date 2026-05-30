@@ -2,31 +2,23 @@
 
 import { cn } from '@/lib/utils';
 import { LucideIcon } from 'lucide-react';
+import { useState } from 'react';
 
 interface ValueCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
   gradient: string;
-  isHovered: boolean;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
 }
 
-export function ValueCard({
-  icon: Icon,
-  title,
-  description,
-  gradient,
-  isHovered,
-  onMouseEnter,
-  onMouseLeave,
-}: ValueCardProps) {
+export function ValueCard({ icon: Icon, title, description, gradient }: ValueCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className='group glass-card glass-card-hover morph-hover shimmer relative overflow-hidden rounded-3xl bg-slate-900/90 p-8 transition-all duration-500'
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className='relative z-10 flex items-start gap-6'>
         <div className='shrink-0'>

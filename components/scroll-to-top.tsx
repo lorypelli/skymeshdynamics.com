@@ -9,11 +9,7 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (scrollY > 600) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(scrollY > 600);
     };
 
     document.addEventListener('scroll', toggleVisibility);

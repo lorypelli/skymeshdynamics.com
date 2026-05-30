@@ -21,10 +21,6 @@ export function Header() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [mobileMenuOpen]);
 
-  const handleLinkClick = () => {
-    handleClose();
-  };
-
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
@@ -77,7 +73,7 @@ export function Header() {
         </div>
       </header>
 
-      <MobileMenu isOpen={mobileMenuOpen} isClosing={isClosing} onClose={handleClose} onLinkClick={handleLinkClick} />
+      <MobileMenu isOpen={mobileMenuOpen} isClosing={isClosing} onClose={handleClose} onLinkClick={handleClose} />
     </>
   );
 }

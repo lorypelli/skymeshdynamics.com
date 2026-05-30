@@ -1,32 +1,27 @@
-'use client';
-
-import { useState } from 'react';
 import { VisionCard } from './vision-card';
 
+const visionPoints = [
+  {
+    number: '1',
+    title: 'Distributed Network',
+    description: 'Data no longer travels to a single center, but flows freely within an intelligent global network.',
+    gradient: 'from-blue-500 to-cyan-500',
+  },
+  {
+    number: '2',
+    title: 'Micro Data Centers',
+    description: 'An ecosystem of distributed micro-data centers capable of communicating, learning, and adapting.',
+    gradient: 'from-purple-500 to-pink-500',
+  },
+  {
+    number: '3',
+    title: 'Living System',
+    description: 'Infrastructure that self-optimizes like a natural organism, ensuring faster and safer experiences.',
+    gradient: 'from-cyan-500 to-blue-500',
+  },
+];
+
 export function Vision() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const visionPoints = [
-    {
-      number: '1',
-      title: 'Distributed Network',
-      description: 'Data no longer travels to a single center, but flows freely within an intelligent global network.',
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      number: '2',
-      title: 'Micro Data Centers',
-      description: 'An ecosystem of distributed micro-data centers capable of communicating, learning, and adapting.',
-      gradient: 'from-purple-500 to-pink-500',
-    },
-    {
-      number: '3',
-      title: 'Living System',
-      description: 'Infrastructure that self-optimizes like a natural organism, ensuring faster and safer experiences.',
-      gradient: 'from-cyan-500 to-blue-500',
-    },
-  ];
-
   return (
     <section id='vision' className='relative py-32'>
       <div className='container mx-auto px-6'>
@@ -48,16 +43,7 @@ export function Vision() {
 
             <div className='grid gap-8 pt-8 md:grid-cols-3'>
               {visionPoints.map((point, index) => (
-                <VisionCard
-                  key={index}
-                  number={point.number}
-                  title={point.title}
-                  description={point.description}
-                  gradient={point.gradient}
-                  isHovered={hoveredIndex === index}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                />
+                <VisionCard key={index} {...point} />
               ))}
             </div>
           </div>

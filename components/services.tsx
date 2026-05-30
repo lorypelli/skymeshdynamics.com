@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Cpu, Lock, Network } from 'lucide-react';
-import { useState } from 'react';
 import { SectionHeader } from './section-header';
 import { ServiceCard } from './service-card';
 
@@ -38,8 +37,6 @@ interface ServicesProps {
 }
 
 export function Services({ onContactClick }: ServicesProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section id='services' className='relative py-32'>
       <div className='container mx-auto px-6'>
@@ -51,17 +48,7 @@ export function Services({ onContactClick }: ServicesProps) {
 
         <div className='mx-auto grid max-w-7xl gap-8 lg:grid-cols-3'>
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              features={service.features}
-              gradient={service.gradient}
-              isHovered={hoveredIndex === index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            />
+            <ServiceCard key={index} {...service} />
           ))}
         </div>
 
