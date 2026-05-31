@@ -24,10 +24,10 @@ che gestisce server room, rack ad alta densità, UPS (Uninterruptible Power Supp
 
 Il rischio di elettrocuzione si distingue in base al tipo di contatto con la tensione:
 
-| Tipo di Contatto | Descrizione | Esempio in data center |
-| ---------------- | ----------- | ---------------------- |
-| **Diretto** | Contatto con parti normalmente in tensione (conduttori attivi) | Toccare un cavo sguainato, un morsetto sotto tensione |
-| **Indiretto** | Contatto con masse metalliche diventate accidentalmente in tensione a causa di un guasto | Toccare il telaio di un server con guasto di isolamento |
+| Tipo di Contatto | Descrizione                                                                              | Esempio in data center                                  |
+| ---------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **Diretto**      | Contatto con parti normalmente in tensione (conduttori attivi)                           | Toccare un cavo sguainato, un morsetto sotto tensione   |
+| **Indiretto**    | Contatto con masse metalliche diventate accidentalmente in tensione a causa di un guasto | Toccare il telaio di un server con guasto di isolamento |
 
 La protezione dai contatti diretti avviene tramite **isolamento** dei conduttori e **involucri** (custodie, armadi chiusi a chiave). La protezione dai contatti indiretti avviene tramite **messa a terra** e **interruttore differenziale**.
 
@@ -126,21 +126,21 @@ La **Norma CEI 11-27** definisce le procedure e i requisiti di abilitazione per 
 
 ### Classificazione dei Lavori
 
-| Categoria | Descrizione | Requisiti |
-| --------- | ----------- | --------- |
-| **Fuori tensione** | Impianto messo in sicurezza (sezionato, bloccato, verificato assenza tensione) | La più sicura; obbligatoria quando possibile |
-| **In prossimità di parti in tensione** | Il lavoratore opera nelle vicinanze di elementi sotto tensione senza toccarli | Richiede distanze di sicurezza e DPI appropriati |
-| **Sotto tensione** | Intervento diretto su parti in tensione | Solo per figure abilitate PES/PAV; raramente necessario in ambienti data center |
+| Categoria                              | Descrizione                                                                    | Requisiti                                                                       |
+| -------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| **Fuori tensione**                     | Impianto messo in sicurezza (sezionato, bloccato, verificato assenza tensione) | La più sicura; obbligatoria quando possibile                                    |
+| **In prossimità di parti in tensione** | Il lavoratore opera nelle vicinanze di elementi sotto tensione senza toccarli  | Richiede distanze di sicurezza e DPI appropriati                                |
+| **Sotto tensione**                     | Intervento diretto su parti in tensione                                        | Solo per figure abilitate PES/PAV; raramente necessario in ambienti data center |
 
 ### Figure Abilitate (CEI 11-27)
 
 La norma definisce tre livelli di abilitazione per i lavoratori elettrici:
 
-| Sigla | Denominazione | Competenze |
-| ----- | ------------- | ---------- |
-| **PES** | Persona Esperta | Conosce la costruzione e il funzionamento degli impianti; riconosce i pericoli; può lavorare sotto tensione se necessario |
-| **PAV** | Persona Avvertita | Adeguatamente informata da una PES; può eseguire lavori in prossimità sotto supervisione |
-| **PEI** | Persona Idonea | Specificamente abilitata al lavoro sotto tensione; massimo livello di qualificazione |
+| Sigla   | Denominazione     | Competenze                                                                                                                |
+| ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **PES** | Persona Esperta   | Conosce la costruzione e il funzionamento degli impianti; riconosce i pericoli; può lavorare sotto tensione se necessario |
+| **PAV** | Persona Avvertita | Adeguatamente informata da una PES; può eseguire lavori in prossimità sotto supervisione                                  |
+| **PEI** | Persona Idonea    | Specificamente abilitata al lavoro sotto tensione; massimo livello di qualificazione                                      |
 
 <Callout type='warn'>
   In SkyMesh Dynamics, qualsiasi intervento su impianti elettrici dei data center deve essere eseguito da personale con
